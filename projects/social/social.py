@@ -134,6 +134,18 @@ if __name__ == "__main__":
     print(sg.friendships)
     connections = sg.get_all_social_paths(1)
     print(connections)
+
+    new_sg = SocialGraph()
+    new_sg.populate_graph(1000, 5)
+    new_connections = new_sg.get_all_social_paths(1)
+    for i in range(1, 1000):
+        if i not in new_connections:
+            print(i)
+    avg = []
+    for k, v in new_connections.items():
+        avg.append(len(v))
+    print(sum(avg) / len(avg))
+
     # test = SocialGraph()
     # test.friendships = {
     #     1: {8, 10, 5},
