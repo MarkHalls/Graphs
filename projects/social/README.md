@@ -47,9 +47,15 @@ Note that in this sample, Users 3, 4 and 9 are not in User 1's extended social n
 ## 3. Questions
 
 1. To create 100 users with an average of 10 friends each, how many times would you need to call `add_friendship()`? Why?
-
+   we'd need to call it 50 times because regardless of how many friends someone
+   has, adding a friend creates a 2 way relationship. So it could be said that
+   some users would have their friends added indirectly because everyone else
+   added them as a friend.
 2. If you create 1000 users with an average of 5 random friends each, what percentage of other users will be in a particular user's extended social network? What is the average degree of separation between a user and those in his/her extended network?
-
+   It appears that there's a 90% chance that a user would be in their social
+   network
+   The average degree of separation is between 5 and 6 which is in line with the
+   6 degrees of separation theory.
 
 
 ## 4. Stretch Goal
